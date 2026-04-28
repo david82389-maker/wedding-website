@@ -167,6 +167,28 @@
     outline: none;
 }
 
+/* --- Venue blocks in map section --- */
+.venue-block { margin: 30px 0; }
+.venue-title {
+    color: var(--purple);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+.venue-info {
+    padding: 20px;
+    background: #fff;
+    border-left: 3px solid var(--purple-light);
+    border-radius: 4px;
+    height: 100%;
+}
+.venue-info h5 { color: var(--purple-dark); margin-top: 0; }
+.venue-divider {
+    border-top: 1px dashed var(--purple-light);
+    margin: 20px 0;
+}
+
 /* to-top button */
 .to-top-wrapper a,
 .to-top {
