@@ -54,6 +54,15 @@
     .hero-ampersand  { font-size: 1.6em; margin: 0 10px; }
 }
 
+/* --- Navigation bar: dark purple background --- */
+section.navigation header {
+    background: rgba(58, 38, 90, 0.92) !important;
+    border-bottom: 1px solid rgba(155, 142, 196, 0.3) !important;
+}
+section.navigation.fixed header {
+    background: rgba(44, 28, 72, 0.97) !important;
+}
+
 /* --- Logo text in nav --- */
 .logo-text {
     font-family: 'Georgia', serif;
