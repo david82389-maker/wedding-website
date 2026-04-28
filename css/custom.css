@@ -3,6 +3,12 @@
    Colours: Dusty Purple + Cream
    ============================================= */
 
+/* --- Hero background: use David & Kristy's photo --- */
+.hero {
+    background: url('../img/hero.jpg') center center !important;
+    background-size: cover !important;
+}
+
 /* --- Colour Variables (via utility classes) --- */
 :root {
     --purple:       #8B7BB0;
