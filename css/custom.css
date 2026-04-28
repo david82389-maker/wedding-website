@@ -1,0 +1,180 @@
+/* =============================================
+   David & Kristy Wedding — Custom Theme
+   Colours: Dusty Purple + Cream
+   ============================================= */
+
+/* --- Colour Variables (via utility classes) --- */
+:root {
+    --purple:       #8B7BB0;
+    --purple-dark:  #7A6A9F;
+    --purple-light: #C4B8DC;
+    --cream:        #FAF8F3;
+    --cream-dark:   #F3EFE6;
+    --gold-remove:  #e8ca6f; /* original accent we are replacing */
+}
+
+/* --- Hero: Names --- */
+.hero-names {
+    margin: 20px 0 10px;
+    line-height: 1;
+}
+.hero-name-bride,
+.hero-name-groom {
+    display: inline-block;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 4em;
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+.hero-ampersand {
+    display: inline-block;
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    color: var(--purple-light);
+    margin: 0 18px;
+    vertical-align: middle;
+}
+.hero-date {
+    font-size: 1.1em;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+@media (max-width: 767px) {
+    .hero-name-bride,
+    .hero-name-groom { font-size: 2.4em; }
+    .hero-ampersand  { font-size: 1.6em; margin: 0 10px; }
+}
+
+/* --- Logo text in nav --- */
+.logo-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.3em;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+/* --- Countdown Timer --- */
+.countdown-wrapper {
+    margin-top: 36px;
+    padding-bottom: 10px;
+}
+.countdown {
+    display: inline-flex;
+    gap: 30px;
+}
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 64px;
+}
+.countdown-item span:first-child {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.cd-label {
+    font-size: 0.7em;
+    color: rgba(255,255,255,0.75);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 4px;
+}
+@media (max-width: 480px) {
+    .countdown { gap: 16px; }
+    .countdown-item span:first-child { font-size: 2em; }
+    .countdown-item { min-width: 48px; }
+}
+
+/* --- Accent colour overrides (replace gold #e8ca6f with purple) --- */
+.btn-accent,
+.rsvp .btn-fill,
+.rsvp-btn {
+    background-color: var(--purple) !important;
+    border-color:     var(--purple) !important;
+    color: #fff !important;
+}
+.btn-accent:hover,
+.rsvp .btn-fill:hover,
+.rsvp-btn:hover {
+    background-color: var(--purple-dark) !important;
+    border-color:     var(--purple-dark) !important;
+}
+
+/* Outline "btn-fill" buttons in non-rsvp sections */
+.btn-fill {
+    border-color: var(--purple) !important;
+    color: var(--purple) !important;
+}
+.btn-fill:hover {
+    background-color: var(--purple) !important;
+    color: #fff !important;
+}
+
+/* Highlighted time labels in schedule */
+.time { color: var(--purple); }
+
+/* Section alternating background — cream instead of blue-grey */
+.events,
+#gallery {
+    background-color: var(--cream) !important;
+}
+
+/* RSVP section background */
+.rsvp {
+    background-color: var(--purple) !important;
+}
+
+/* Map info panel */
+#map-content {
+    background: #fff;
+    border: 1px solid #e0d8ef;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 12px;
+}
+#map-canvas {
+    padding: 0;
+}
+#map-canvas iframe {
+    display: block;
+}
+
+/* Gallery overlay tint — purple instead of default */
+.img-wrap .overlay {
+    background: rgba(139, 123, 176, 0.7) !important;
+}
+
+/* Footer heart pulse colour */
+.fa-heart { color: var(--purple) !important; }
+
+/* Invitation section — gentle cream background */
+#invitation {
+    background-color: var(--cream-dark);
+}
+
+/* "Our Story" placeholder italic */
+#intro { background-color: #fff; }
+
+/* Form focus outline */
+.form-input-group input:focus {
+    border-bottom-color: var(--purple) !important;
+    outline: none;
+}
+
+/* to-top button */
+.to-top-wrapper a,
+.to-top {
+    color: var(--purple) !important;
+}
+
+/* nav active / hover links */
+.primary-nav li a:hover,
+.member-actions .login:hover {
+    color: var(--purple-light) !important;
+}
