@@ -54,13 +54,29 @@
     .hero-ampersand  { font-size: 1.6em; margin: 0 10px; }
 }
 
-/* --- Navigation bar: dark purple background --- */
+/* --- Navigation bar: transparent with dark purple text --- */
 section.navigation header {
-    background: rgba(58, 38, 90, 0.92) !important;
-    border-bottom: 1px solid rgba(155, 142, 196, 0.3) !important;
+    background: transparent !important;
 }
 section.navigation.fixed header {
-    background: rgba(44, 28, 72, 0.97) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+.primary-nav li a,
+.member-actions .login,
+.logo-text {
+    color: #3a265a !important;
+}
+.primary-nav li a:hover,
+.member-actions .login:hover {
+    color: var(--purple) !important;
+}
+.btn-white {
+    border-color: #3a265a !important;
+    color: #3a265a !important;
+}
+.btn-white:hover {
+    background: #3a265a !important;
+    color: #fff !important;
 }
 
 /* --- Logo text in nav --- */
