@@ -198,6 +198,35 @@ section.navigation.fixed header {
     outline: none;
 }
 
+/* --- Our Story section --- */
+.story-subtitle {
+    color: var(--purple);
+    letter-spacing: 3px;
+    font-size: 0.95em;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.story-divider {
+    color: var(--purple-light);
+    font-size: 1.4em;
+    margin: 25px 0;
+}
+.story-text {
+    font-size: 1.05em;
+    line-height: 2;
+    color: #5a5a5a;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+.story-signature {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--purple-dark);
+    font-size: 1.2em;
+    margin-top: 35px;
+}
+
 /* --- Venue blocks in map section --- */
 .venue-block { margin: 30px 0; }
 .venue-title {
