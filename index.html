@@ -62,7 +62,6 @@
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Venue</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -85,13 +84,6 @@
                     <p class="hero-date">04 · 10 · 2026</p>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center">
-                <a href="#rsvp" class="btn btn-accent btn-large rsvp-btn">RSVP</a>
-            </div>
-            <div class="col-sm-4 hidden-xs"></div>
         </div>
         <div class="row">
             <div class="col-xs-12 text-center">
@@ -334,68 +326,6 @@
                     allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="rsvp text-center" id="rsvp">
-
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are so glad you will be joining us on our special day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>Will you join us?</h3>
-                <p>Please RSVP before <strong>1st September 2026</strong> so we can prepare accordingly.</p>
-                <form id="rsvp-form" class="rsvp-form" method="POST">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i>
-                                <input type="email" name="email" placeholder="Your email" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-user"></i>
-                                <input type="text" name="name" placeholder="Your name" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-users"></i>
-                                <input type="number" name="extras" min="0" max="4"
-                                       placeholder="Additional guests (0–4)" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="form-input-group">
-                                <i class="fa fa-comment"></i>
-                                <input type="text" name="message" placeholder="Dietary needs / message (optional)">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12" id="alert-wrapper"></div>
-                    </div>
-                    <button class="btn-fill rsvp-btn">Yes, I'll be there!</button>
-                </form>
             </div>
         </div>
     </div>

@@ -123,21 +123,17 @@ section.navigation.fixed header {
 }
 
 /* --- Accent colour overrides (replace gold #e8ca6f with purple) --- */
-.btn-accent,
-.rsvp .btn-fill,
-.rsvp-btn {
+.btn-accent {
     background-color: var(--purple) !important;
     border-color:     var(--purple) !important;
     color: #fff !important;
 }
-.btn-accent:hover,
-.rsvp .btn-fill:hover,
-.rsvp-btn:hover {
+.btn-accent:hover {
     background-color: var(--purple-dark) !important;
     border-color:     var(--purple-dark) !important;
 }
 
-/* Outline "btn-fill" buttons in non-rsvp sections */
+/* Outline "btn-fill" buttons */
 .btn-fill {
     border-color: var(--purple) !important;
     color: var(--purple) !important;
@@ -154,11 +150,6 @@ section.navigation.fixed header {
 .events,
 #gallery {
     background-color: var(--cream) !important;
-}
-
-/* RSVP section background */
-.rsvp {
-    background-color: var(--purple) !important;
 }
 
 /* Map info panel */
