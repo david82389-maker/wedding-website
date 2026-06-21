@@ -24,29 +24,27 @@ $(document).ready(function () {
     var bgMusic = document.getElementById('bg-music');
     var musicBtn = $('#music-toggle');
 
-    function startMusic() {
+    function tryStartMusic() {
+        if (!bgMusic.paused) return;
         bgMusic.play().then(function () {
             musicBtn.addClass('playing');
+            $(document).off('click touchend pointerdown keydown', tryStartMusic);
         }).catch(function () {
-            // still blocked, will retry on next interaction
+            // blocked — will retry on the next real interaction
         });
     }
 
-    // Try to autoplay immediately (works if browser allows it).
-    startMusic();
+    // Try to autoplay immediately (works on some browsers/visits).
+    tryStartMusic();
 
-    // Most browsers block audio with sound until the user interacts with the
-    // page at least once. As soon as that happens anywhere (scroll, tap,
-    // click), start the music automatically — no need to find the button.
-    $(document).one('click touchstart scroll keydown', function () {
-        if (bgMusic.paused) {
-            startMusic();
-        }
-    });
+    // Browsers only allow audio-with-sound after a genuine user gesture —
+    // a "click"/"tap" counts, but scrolling does NOT. Keep listening (not
+    // just once) until one of these actually succeeds in starting playback.
+    $(document).on('click touchend pointerdown keydown', tryStartMusic);
 
     musicBtn.click(function () {
         if (bgMusic.paused) {
-            startMusic();
+            tryStartMusic();
         } else {
             bgMusic.pause();
             musicBtn.removeClass('playing');
