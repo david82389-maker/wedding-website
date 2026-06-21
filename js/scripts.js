@@ -1,5 +1,19 @@
 $(document).ready(function () {
 
+    /***************** Background Music ******************/
+    var bgMusic = document.getElementById('bg-music');
+    var musicBtn = $('#music-toggle');
+
+    musicBtn.click(function () {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicBtn.addClass('playing');
+        } else {
+            bgMusic.pause();
+            musicBtn.removeClass('playing');
+        }
+    });
+
     /***************** Countdown Timer ******************/
     function updateCountdown() {
         var weddingDate = new Date('October 4, 2026 14:30:00');
