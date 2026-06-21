@@ -1,6 +1,6 @@
 // To add more photos to the gallery: drop new resized images into img/gallery/
 // named NN-sm.jpg (thumbnail) and NN-lg.jpg (full size), then increase this number.
-var GALLERY_PHOTO_COUNT = 9;
+var GALLERY_PHOTO_COUNT = 8;
 
 $(document).ready(function () {
 
@@ -9,7 +9,7 @@ $(document).ready(function () {
     for (var i = 1; i <= GALLERY_PHOTO_COUNT; i++) {
         var num = i < 10 ? '0' + i : i;
         galleryHtml +=
-            '<div class="col-md-2">' +
+            '<div class="col-md-3 col-sm-3 col-xs-6">' +
                 '<a class="fancybox" rel="group" href="img/gallery/' + num + '-lg.jpg">' +
                     '<div class="img-wrap">' +
                         '<div class="overlay"><i class="fa fa-search"></i></div>' +
