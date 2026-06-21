@@ -172,6 +172,18 @@ section.navigation.fixed header {
     background: rgba(139, 123, 176, 0.7) !important;
 }
 
+/* --- Gallery: uniform square thumbnails regardless of photo orientation --- */
+#gallery .img-wrap {
+    aspect-ratio: 1 / 1;
+    margin-bottom: 15px;
+}
+#gallery .img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* Footer heart pulse colour */
 .fa-heart { color: var(--purple) !important; }
 
