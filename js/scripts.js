@@ -24,10 +24,29 @@ $(document).ready(function () {
     var bgMusic = document.getElementById('bg-music');
     var musicBtn = $('#music-toggle');
 
+    function startMusic() {
+        bgMusic.play().then(function () {
+            musicBtn.addClass('playing');
+        }).catch(function () {
+            // still blocked, will retry on next interaction
+        });
+    }
+
+    // Try to autoplay immediately (works if browser allows it).
+    startMusic();
+
+    // Most browsers block audio with sound until the user interacts with the
+    // page at least once. As soon as that happens anywhere (scroll, tap,
+    // click), start the music automatically — no need to find the button.
+    $(document).one('click touchstart scroll keydown', function () {
+        if (bgMusic.paused) {
+            startMusic();
+        }
+    });
+
     musicBtn.click(function () {
         if (bgMusic.paused) {
-            bgMusic.play();
-            musicBtn.addClass('playing');
+            startMusic();
         } else {
             bgMusic.pause();
             musicBtn.removeClass('playing');
