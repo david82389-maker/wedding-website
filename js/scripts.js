@@ -1,4 +1,24 @@
+// To add more photos to the gallery: drop new resized images into img/gallery/
+// named NN-sm.jpg (thumbnail) and NN-lg.jpg (full size), then increase this number.
+var GALLERY_PHOTO_COUNT = 6;
+
 $(document).ready(function () {
+
+    /***************** Build Gallery ******************/
+    var galleryHtml = '';
+    for (var i = 1; i <= GALLERY_PHOTO_COUNT; i++) {
+        var num = i < 10 ? '0' + i : i;
+        galleryHtml +=
+            '<div class="col-md-2">' +
+                '<a class="fancybox" rel="group" href="img/gallery/' + num + '-lg.jpg">' +
+                    '<div class="img-wrap">' +
+                        '<div class="overlay"><i class="fa fa-search"></i></div>' +
+                        '<img src="img/gallery/' + num + '-sm.jpg" alt="Photo ' + i + '"/>' +
+                    '</div>' +
+                '</a>' +
+            '</div>';
+    }
+    $('#gallery-grid').html(galleryHtml);
 
     /***************** Background Music ******************/
     var bgMusic = document.getElementById('bg-music');
