@@ -3,6 +3,34 @@
    Colours: Dusty Purple + Cream
    ============================================= */
 
+/* --- Global font size increase (+2 sizes across the board) --- */
+body, p {
+    font-size: 19px !important;
+}
+h1 { font-size: 68px !important; }
+h2 { font-size: 48px !important; }
+h3 { font-size: 30px !important; }
+h4 { font-size: 22px !important; }
+h5 { font-size: 19px !important; }
+.primary-nav li a,
+.member-actions .login,
+.header-nav nav ul li a,
+.btn,
+.btn-small,
+.btn-large,
+.form-input-group input,
+.rsvp-form button {
+    font-size: 17px !important;
+}
+@media (max-width: 767px) {
+    body, p { font-size: 17px !important; }
+    h1 { font-size: 44px !important; }
+    h2 { font-size: 34px !important; }
+    h3 { font-size: 24px !important; }
+    h4 { font-size: 20px !important; }
+    h5 { font-size: 17px !important; }
+}
+
 /* --- Transit details (collapsible) --- */
 .transit-toggle {
     display: block;
