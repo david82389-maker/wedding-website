@@ -3,6 +3,47 @@
    Colours: Dusty Purple + Cream
    ============================================= */
 
+/* --- Transit details (collapsible) --- */
+.transit-toggle {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border-top: 1px dashed #e0d8ef;
+    border-bottom: 1px dashed #e0d8ef;
+    padding: 10px 0;
+    margin: 10px 0;
+    color: #8B7BB0;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.transit-toggle .fa-chevron-down {
+    float: right;
+    transition: transform 0.2s ease;
+}
+.transit-toggle.open .fa-chevron-down {
+    transform: rotate(180deg);
+}
+.transit-block {
+    display: none;
+    margin-bottom: 10px;
+}
+.transit-block.open {
+    display: block;
+}
+.transit-mode {
+    font-weight: bold;
+    color: #7A6A9F;
+    margin-bottom: 4px;
+    margin-top: 14px;
+}
+.transit-detail {
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: #666;
+}
+
 /* --- Hero background: use David & Kristy's photo --- */
 .hero {
     background: url('../img/hero.jpg') center center !important;

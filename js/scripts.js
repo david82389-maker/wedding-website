@@ -20,6 +20,11 @@ $(document).ready(function () {
     }
     $('#gallery-grid').html(galleryHtml);
 
+    /***************** Transit Details Toggle ******************/
+    $('.transit-toggle').click(function () {
+        $(this).toggleClass('open').next('.transit-block').toggleClass('open');
+    });
+
     /***************** Background Music ******************/
     var bgMusic = document.getElementById('bg-music');
     var musicBtn = $('#music-toggle');
